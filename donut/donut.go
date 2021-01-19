@@ -5,6 +5,7 @@ import (
 	"time"
 	"os/exec"
 	"os"
+	"runtime"
 )
 
 const (
@@ -38,9 +39,26 @@ func main() {
 	z := make([]float64, 1760)
 	b := make([]string, 1760)
 
-	cmd := exec.Command("cmd", "/c", "cls")
-    cmd.Stdout = os.Stdout
-    cmd.Run()
+	osz := runtime.GOOS
+    	switch osz {
+    	case "windows":
+        	fmt.Println("Windows")
+		cmd := exec.Command("cmd", "/c", "cls")
+		cmd.Stdout = os.Stdout
+		cmd.Run()
+    	case "darwin":
+        	fmt.Println("MAC operating system")
+                cmd := exec.Command("clear")
+		cmd.Stdout = os.Stdout
+		cmd.Run()
+    	case "linux":
+        	fmt.Println("Linux")
+		cmd := exec.Command("clear")
+		cmd.Stdout = os.Stdout
+		cmd.Run()
+    	default:
+        	fmt.Printf("%s.\n", osz)
+    	}
 
 	for {
 		byteMemset(b, " ")
