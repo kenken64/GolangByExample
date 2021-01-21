@@ -8,6 +8,31 @@ https://blog.golang.org/maps
 m := make(map[string]int)
 ```
 
+### short hand declaration
+
+```
+m := 0.0
+``
+
+### Underscore (Blank identifier)
+
+```
+_, err := test()
+
+```
+
+### Channel operator <- arrow
+
+```
+ch chan<-string
+```
+
+```
+ch <- v    // Send v to channel ch.
+v := <-ch  // Receive from ch, and
+           // assign value to v.
+``
+
 ### fmt printF arg
 
 fmt (Args) | Describe
