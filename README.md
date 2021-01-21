@@ -1,4 +1,15 @@
 ## Chapter 1
+
+### Make map
+
+https://blog.golang.org/maps
+
+```
+m := make(map[string]int)
+```
+
+### fmt printF arg
+
 fmt (Args) | Describe
 ------------ | -------------
 %d | decimal integer 
