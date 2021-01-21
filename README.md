@@ -12,7 +12,7 @@ m := make(map[string]int)
 
 ```
 m := 0.0
-``
+```
 
 ### Underscore (Blank identifier)
 
@@ -31,7 +31,7 @@ ch chan<-string
 ch <- v    // Send v to channel ch.
 v := <-ch  // Receive from ch, and
            // assign value to v.
-``
+```
 
 ### fmt printF arg
 
