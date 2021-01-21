@@ -8,7 +8,7 @@ https://blog.golang.org/maps
 m := make(map[string]int)
 ```
 
-### short hand declaration
+### Short hand declaration
 
 ```
 m := 0.0
